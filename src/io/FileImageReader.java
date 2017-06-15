@@ -17,7 +17,7 @@ import utils.Debug;
 public class FileImageReader {
 	private final static String TAG = "SR_ImageReader";
 	//Change as necessary
-	private final static String DIRECTORY_PATH = "C:/Users/NeilDG/Documents/MSCSGithubProjects/OpenCV_BeginnerTutorial/img/test_case";
+	public final static String DIRECTORY_PATH = "C:/Users/NeilDG/Documents/MSCSGithubProjects/OpenCV_BeginnerTutorial/img/test_case";
 	
 	private static FileImageReader sharedInstance = null;
 	public static FileImageReader getInstance() {
@@ -35,11 +35,7 @@ public class FileImageReader {
 	public static void destroy() {
 		sharedInstance = null;
 	}
-	
-	public void setContext() {
-		
-	}
-	
+
 	/**
 	 * Reads an image from file and returns its matrix form represented by openCV
 	 * @param fileName
