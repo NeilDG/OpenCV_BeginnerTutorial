@@ -33,11 +33,8 @@ public class ImageDenoiseWorker {
 	}
 	
 	public void perform() {
-		//open first image
 		
 		int maxImages = 5;
-		
-		
 		Mat[] loadedImages = new Mat[maxImages];
 		
 		Mat denoiseMat = new Mat();
@@ -54,14 +51,12 @@ public class ImageDenoiseWorker {
 		}
 		
 		//accumulate the values
-		for(int i = 1; i < loadedImages.length; i++) {
-			Core.add(denoiseMat, loadedImages[i], denoiseMat);
-		}
+		
 		
 		//divide the values depending on how many images were accumulated
-		Core.divide(denoiseMat, Scalar.all(maxImages), denoiseMat);
 		
-		FileImageWriter.getInstance().saveMatrixToImage(denoiseMat, "output", FileType.JPEG);
+		
+		//save the denoise mat as image
 		
 		
 	}
