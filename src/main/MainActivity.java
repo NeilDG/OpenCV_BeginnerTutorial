@@ -21,8 +21,8 @@ public class MainActivity {
 		//IMPORTANT: Load system library of OpenCV
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		
-		Mat  openCvMat = Mat.zeros(5, 5, CvType.CV_16S);
-		Debug.log(TAG, "Test of openCV property: " +openCvMat.toString());
+		ImageDenoiseWorker imageDenoiseWorker = new ImageDenoiseWorker();
+		imageDenoiseWorker.perform();
 	}
 
 }
